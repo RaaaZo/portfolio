@@ -96,19 +96,24 @@ export const wantToLearnData = [
     inverse: false
   },
   {
+    id: 21,
+    text: "Next.js / Gatsby",
+    inverse: true
+  },
+  {
     id: 18,
     text: "Graphql",
-    inverse: true
+    inverse: false
   },
   {
     id: 19,
     text: "TypeScript",
-    inverse: false
+    inverse: true
   },
   {
     id: 20,
     text: "WordPress",
-    inverse: true
+    inverse: false
   }
 ];
 

@@ -1,43 +1,47 @@
-import React from "react";
+import React, { Suspense } from "react";
 import HomePage from "pages/HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import AboutPage from "pages/AboutPage";
-import SkillsPage from "pages/SkillsPage";
-import ProjectsPage from "pages/ProjectsPage";
-import ContactPage from "pages/ContactPage";
-import HobbiesPage from "pages/HobbiesPage";
 import MainTemplate from "templates/MainTemplate";
+import LoadingSpinner from "components/atoms/LoadingSpinner/LoadingSpinner";
+
+const AboutPage = React.lazy(() => import("./pages/AboutPage"));
+const SkillsPage = React.lazy(() => import("./pages/SkillsPage"));
+const ProjectsPage = React.lazy(() => import("./pages/ProjectsPage"));
+const ContactPage = React.lazy(() => import("./pages/ContactPage"));
+const HobbiesPage = React.lazy(() => import("./pages/HobbiesPage"));
 
 function App() {
   return (
     <Router>
       <MainTemplate>
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
 
-          <Route exact path="/about">
-            <AboutPage />
-          </Route>
+            <Route exact path="/about">
+              <AboutPage />
+            </Route>
 
-          <Route exact path="/skills">
-            <SkillsPage />
-          </Route>
+            <Route exact path="/skills">
+              <SkillsPage />
+            </Route>
 
-          <Route exact path="/projects">
-            <ProjectsPage />
-          </Route>
+            <Route exact path="/projects">
+              <ProjectsPage />
+            </Route>
 
-          <Route exact path="/contact">
-            <ContactPage />
-          </Route>
+            <Route exact path="/contact">
+              <ContactPage />
+            </Route>
 
-          <Route exact path="/hobbies">
-            <HobbiesPage />
-          </Route>
-        </Switch>
+            <Route exact path="/hobbies">
+              <HobbiesPage />
+            </Route>
+          </Switch>
+        </Suspense>
       </MainTemplate>
     </Router>
   );

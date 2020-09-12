@@ -5,7 +5,7 @@ import { Paragraph } from "components/atoms/Paragraph";
 
 const Wrapper = styled.div`
   width: 90%;
-  height: 450px;
+  height: 550px;
   padding: 20px;
   margin: 20px auto;
   margin-bottom: 80px;
@@ -17,12 +17,12 @@ const Wrapper = styled.div`
   border-radius: 15px;
 
   @media (min-width: 768px) {
-    height: 600px;
+    height: 650px;
   }
 
   @media (min-width: 1140px) {
     width: 46%;
-    height: 700px;
+    height: 750px;
     margin: 30px 20px 90px 20px;
   }
 `;
@@ -44,6 +44,7 @@ const AnchorsWrapper = styled.div`
 const StyledHeader = styled(Header)`
   width: 90%;
   margin: 20px auto;
+  text-align: center;
 `;
 
 const StyledParagraph = styled(Paragraph)`

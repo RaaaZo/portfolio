@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
 
 export const Paragraph = styled.p`
+  width: 90%;
   max-width: 1280px;
   font-size: ${({ theme: { fontSizes } }) => fontSizes.xs};
   text-align: justify;
   text-align-last: center;
-  margin: 30px;
+  margin: 30px auto;
   margin-bottom: 80px;
 
   @media (min-width: 660px) {

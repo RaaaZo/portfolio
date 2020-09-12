@@ -19,6 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StyledHeader = styled(Header)`
   margin: 20px auto;
+  text-align: center;
 `;
 
 const ButtonsWrapper = styled.div`
@@ -98,6 +99,16 @@ const StyledArrowSvg = styled(ArrowSvg)`
   margin-bottom: 40px;
 `;
 
+const StyledParagraph = styled(Paragraph)`
+  @media (min-width: 660px) {
+    width: 90%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
+`;
+
 const SkillsPage = () => {
   const buttonsWrapperRef = useRef([]);
   buttonsWrapperRef.current = [];
@@ -151,13 +162,13 @@ const SkillsPage = () => {
 
       <StyledHeader title>Skills</StyledHeader>
 
-      <Paragraph semiBold="true">
+      <StyledParagraph semiBold="true">
         In each new project, I try to apply new concepts so that I can develop
         my skills from project to project. Most of my projects are based on
         React. This is because I feel best in it. And I liked his concept the
         most of the other frameworks. All my knowledge comes from self-study as
         well as online courses.
-      </Paragraph>
+      </StyledParagraph>
 
       <SvgWrapper>
         <StyledArrowSvg ref={arrowRef} />

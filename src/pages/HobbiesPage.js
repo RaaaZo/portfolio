@@ -32,7 +32,6 @@ const StyledParagraph = styled(Paragraph)`
 const HobbiesPage = () => {
   return (
     <>
-      <PagesAnimations firstSideImage={hobbies1} secondSideImage={hobbies2} />
       <HeroImage
         veryBigImage={veryBigImage}
         bigImage={bigImage}
@@ -66,6 +65,8 @@ const HobbiesPage = () => {
           enjoy reading literature mostly in the fantasy category.
         </StyledParagraph>
       </PagesWrapper>
+
+      <PagesAnimations firstSideImage={hobbies1} secondSideImage={hobbies2} />
     </>
   );
 };

@@ -2,24 +2,56 @@ import React, { useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import gsap from "gsap";
 
+const Wrapper = styled.div`
+  position: relative;
+  width: 90%;
+  height: 350px;
+  margin: 20px auto 80px auto;
+
+  @media (min-width: 650px) {
+    height: 400px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 450px;
+  }
+
+  @media (min-width: 1440px) {
+    position: static;
+    height: 0;
+  }
+`;
+
 const StyledImg = styled.img`
-  display: none;
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   position: absolute;
-  top: 65%;
-  right: 1%;
+  top: 45%;
+  right: 2%;
   border-radius: 25px;
-  transform: rotate(8deg);
+  transform: rotate(8deg) translateY(-50%);
   object-fit: cover;
   object-position: center right;
 
-  @media (min-width: 1440px) and (min-height: 800px) {
-    display: block;
+  @media (min-width: 650px) {
+    width: 240px;
+    height: 350px;
+    right: 20%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 300px;
+    height: 400px;
+    right: 25%;
+  }
+
+  @media (min-width: 1440px) {
+    top: 105%;
+    right: 3%;
   }
 
   @media (min-width: 2100px) {
-    right: 3%;
+    right: 5%;
     width: 400px;
     height: 500px;
   }
@@ -27,21 +59,40 @@ const StyledImg = styled.img`
   ${({ second }) =>
     second &&
     css`
-      width: 250px;
-      height: 400px;
-      top: 85%;
+      width: 220px;
+      height: 300px;
+      top: 55%;
       left: 3%;
-      transform: rotate(-12deg);
+      transform: rotate(-12deg) translateY(-50%);
       object-position: center;
 
+      @media (min-width: 650px) {
+        width: 260px;
+        height: 350px;
+        left: 20%;
+      }
+
+      @media (min-width: 1024px) {
+        width: 320px;
+        height: 400px;
+        left: 25%;
+      }
+
+      @media (min-width: 1440px) {
+        width: 250px;
+        height: 400px;
+        top: 90%;
+        left: 5%;
+      }
+
       @media (min-width: 1600px) {
-        top: 80%;
-        width: 350px;
+        top: 85%;
+        width: 300px;
         height: 450px;
       }
 
       @media (min-width: 2100px) {
-        left: 3%;
+        left: 8%;
         width: 450px;
         height: 550px;
       }
@@ -65,7 +116,7 @@ const PagesAnimations = ({ firstSideImage, secondSideImage }) => {
   });
 
   return (
-    <>
+    <Wrapper>
       <StyledImg
         ref={imagesFirstRef}
         src={firstSideImage}
@@ -77,7 +128,7 @@ const PagesAnimations = ({ firstSideImage, secondSideImage }) => {
         src={secondSideImage}
         alt="left side image"
       />
-    </>
+    </Wrapper>
   );
 };
 

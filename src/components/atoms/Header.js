@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const Header = styled.h3`
+  width: 90%;
   max-width: 1280px;
   font-size: ${({ theme: { fontSizes } }) => fontSizes.m};
   font-weight: ${({ theme: { fontWeights } }) => fontWeights.semiBold};
   text-align: justify;
   text-align-last: center;
-  margin: 30px;
+  margin: 30px auto;
 
   @media (min-width: 660px) {
     margin: 30px auto;

@@ -18,7 +18,6 @@ import { Span } from "components/atoms/Span";
 const AboutPage = () => {
   return (
     <>
-      <PagesAnimations firstSideImage={about1} secondSideImage={about2} />
       <HeroImage
         veryBigImage={veryBigImage}
         bigImage={bigImage}
@@ -35,17 +34,17 @@ const AboutPage = () => {
         <Paragraph>
           In August 2020, I graduated from the second-cycle studies in
           Information Systems in Security, specialization:
-          <Span> Information Systems in Security</Span> . At the end of my first
+          <Span> Information Systems in Security</Span>. At the end of my first
           year of studies, I started my adventure with programming at the
-          university. I got acquainted with the basics of the operation of
-          programs such as: <Span> (DODAĆ PROGRAMY)</Span>. However, I started
-          to expand my competences in February this year. I focus on the
-          development and deepening of knowledge. Programming has become my
-          passion. I am a communicative language and open to new challenges. I
-          love learning new things. I perform the entrusted task with care and
-          accuracy.
+          university. However, I started to expand my competences in February
+          this year. I focus on the development and deepening of knowledge.
+          Programming has become my passion. I am a communicative language and
+          open to new challenges. I love learning new things. I perform the
+          entrusted task with care and accuracy.
         </Paragraph>
       </PagesWrapper>
+
+      <PagesAnimations firstSideImage={about1} secondSideImage={about2} />
     </>
   );
 };

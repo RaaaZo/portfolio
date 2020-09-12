@@ -39,10 +39,11 @@ const StyledImg = styled.img`
 `;
 
 const StyledHeader = styled(Header)`
+  width: 50%;
   position: absolute;
   top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  right: 15%;
+  transform: translateY(-50%);
   font-family: ${({ theme: { fontFamilies } }) => fontFamilies.rubik};
   margin: 0;
 `;
@@ -77,15 +78,18 @@ const StyledAnchor = styled.a`
 `;
 
 const StyledPhoneParagraph = styled(Paragraph)`
-  display: none;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  margin: 0;
   color: ${({ theme }) => theme.accents};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.m};
 
-  ${({ isPhoneOpen }) =>
-    isPhoneOpen &&
-    css`
-      display: block;
-    `};
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 const ContactButton = () => {
@@ -103,6 +107,25 @@ const ContactButton = () => {
     <Wrapper>
       {contactData.map(({ link, data, id, svg, text }) => (
         <Fragment key={id}>
+          {data && text === "Phone" && (
+            <>
+              <StyledButton
+                onClick={() => handleIsOpen(setIsPhoneOpen)}
+                contactButton="true"
+              >
+                <StyledImg src={svg} />
+
+                {isPhoneOpen ? (
+                  <StyledPhoneParagraph onClick={e => e.stopPropagation()}>
+                    {data}
+                  </StyledPhoneParagraph>
+                ) : (
+                  <StyledHeader>{text}</StyledHeader>
+                )}
+              </StyledButton>
+            </>
+          )}
+
           {data && text === "Gmail" && (
             <>
               <StyledButton
@@ -112,21 +135,6 @@ const ContactButton = () => {
                 <StyledImg src={svg} />
                 <StyledHeader>{text}</StyledHeader>
               </StyledButton>
-            </>
-          )}
-
-          {data && text === "Phone" && (
-            <>
-              <StyledButton
-                onClick={() => handleIsOpen(setIsPhoneOpen)}
-                contactButton="true"
-              >
-                <StyledImg src={svg} />
-                <StyledHeader>{text}</StyledHeader>
-              </StyledButton>
-              <StyledPhoneParagraph isPhoneOpen={isPhoneOpen}>
-                {data}
-              </StyledPhoneParagraph>
             </>
           )}
 
