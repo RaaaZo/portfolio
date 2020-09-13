@@ -2,6 +2,9 @@
 
 Portfolio with my selected projects, Written in React.js with libraries like GSAP and Styled Components.
 
+## Live
+https://portfolio-cc024.firebaseapp.com/projects
+
 ## Available Scripts
 
 In the project directory, you can run:
