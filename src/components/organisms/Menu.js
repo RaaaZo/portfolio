@@ -9,27 +9,31 @@ const Wrapper = styled.div`
   top: -40px;
   width: 140px;
   height: 140px;
-  background-color: ${({ theme }) => theme.accents};
+  background-color: #ed0065;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 999;
+  z-index: 990;
 `;
 
 const InnerWrapper = styled.div`
-  position: absolute;
-  top: 45%;
-  right: 40%;
+  position: fixed;
+  top: 25px;
+  right: 20px;
   width: 50px;
   height: 40px;
   padding: 10px;
   border: 3px solid #000;
   z-index: 999;
   transition: transform 0.6s linear, border-color 0.6s linear;
+  cursor: pointer;
+  z-index: 999;
 
   @media (min-width: 1024px) {
     width: 60px;
     height: 50px;
     border: 4px solid #000;
+    top: 20px;
+    right: 15px;
 
     ${({ isMenuOpen }) =>
       isMenuOpen &&
@@ -143,7 +147,7 @@ const Menu = () => {
         duration: 1
       });
 
-      gsap.to(iconAnimation.current, { x: "-=200", duration: 0.5 });
+      gsap.to(iconAnimation.current, { x: "-=250", duration: 0.3 });
     }
 
     if (!isMenuOpen) {
@@ -153,16 +157,30 @@ const Menu = () => {
         borderRadius: "50%",
         top: -40,
         right: -40,
-        duration: 1
+        duration: 1.2
       });
 
-      gsap.to(iconAnimation.current, { x: 0, autoAlpha: 1, duration: 0.5 });
+      gsap.to(iconAnimation.current, {
+        x: 0,
+        autoAlpha: 1,
+        duration: 0.4,
+        ease: "Power2.easeIn"
+      });
     }
   }, [menuAnimation, iconAnimation, isMenuOpen]);
 
   return (
     <>
       <MobileModal onClick={handleClickAnimation} isMenuOpen={isMenuOpen} />
+
+      <InnerWrapper
+        isMenuOpen={isMenuOpen}
+        onClick={handleClickAnimation}
+        ref={iconAnimation}
+      >
+        <Hamburger isMenuOpen={isMenuOpen} />
+      </InnerWrapper>
+
       <Wrapper ref={menuAnimation}>
         <NavLinks
           menuAnimation={menuAnimation}
@@ -170,13 +188,6 @@ const Menu = () => {
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
         />
-        <InnerWrapper
-          isMenuOpen={isMenuOpen}
-          onClick={handleClickAnimation}
-          ref={iconAnimation}
-        >
-          <Hamburger isMenuOpen={isMenuOpen} />
-        </InnerWrapper>
       </Wrapper>
     </>
   );

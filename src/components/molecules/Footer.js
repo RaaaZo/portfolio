@@ -6,13 +6,14 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   display: flex;
+  justify-content: center;
   width: 100%;
   height: 25px;
   background-color: ${({ theme }) => theme.primaryDark};
 `;
 
 const StyledLink = styled.a`
-  margin: 0 auto;
+  margin: 0 20px;
   text-decoration: none;
   color: #000;
   line-height: 25px;
@@ -32,6 +33,14 @@ const Footer = () => {
         target="_blank"
       >
         copyrights by <StyledSpan>Mateusz Koprowicz</StyledSpan>
+      </StyledLink>
+
+      <StyledLink
+        href="https://github.com/RaaaZo/portfolio"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <StyledSpan>Portfolio code</StyledSpan>
       </StyledLink>
     </Wrapper>
   );

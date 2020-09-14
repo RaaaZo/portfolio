@@ -104,7 +104,7 @@ const NavLinks = ({
       </StyledNavLink>
 
       <StyledNavLink onClick={() => handlePushToAnimation("/contact")}>
-        contact
+        Contact
       </StyledNavLink>
 
       <StyledNavLink onClick={() => handlePushToAnimation("/hobbies")}>

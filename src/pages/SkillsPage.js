@@ -60,8 +60,8 @@ const StyledButton = styled(Button)`
     margin: 15px 10px;
   }
 
-  ${({ actualyLearning }) =>
-    actualyLearning &&
+  ${({ actuallyLearning }) =>
+    actuallyLearning &&
     css`
       width: 60%;
       padding: 10px;
@@ -114,6 +114,10 @@ const SkillsPage = () => {
   buttonsWrapperRef.current = [];
 
   const arrowRef = useRef();
+
+  const scrollToButtons = () => {
+    window.scrollTo(0, buttonsWrapperRef.current[0].offsetTop - 200);
+  };
 
   useEffect(() => {
     gsap.set(arrowRef.current, { y: "-=20", ease: "none" });
@@ -171,7 +175,7 @@ const SkillsPage = () => {
       </StyledParagraph>
 
       <SvgWrapper>
-        <StyledArrowSvg ref={arrowRef} />
+        <StyledArrowSvg ref={arrowRef} onClick={scrollToButtons} />
       </SvgWrapper>
 
       <ButtonsWrapper>
@@ -186,7 +190,7 @@ const SkillsPage = () => {
       <ButtonsWrapper>
         {actuallyLearningData.map(({ inverse, id, text }) => (
           <StyledButton
-            actualyLearning="true"
+            actuallyLearning="true"
             ref={addToRefs}
             inverse={inverse}
             key={id}

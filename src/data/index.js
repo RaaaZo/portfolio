@@ -121,7 +121,7 @@ export const projectsData = [
   {
     id: 1,
     title: "BestDrinks",
-    descTop: `This is the page where you can add drink recipes. Front-end is written in React (used Context instead of Redux, formik for forms, and other React libraries), Backend in Express.js, and I used MongoDB as a database.`,
+    descTop: `Page where you can add drink recipes. Front-end is written in React (used Context instead of Redux, formik for forms, and other React libraries), Backend in Express.js, and I used MongoDB as a database.`,
     descBottom: `When you log in (default account: test@test.com and password tester123) You can add a new recipe, edit an existing one, and delete existing recipes (if it belongs to Your account). You can also create your new account if you want. Feel free to try it.`,
     live: "https://best-drinks-295be.web.app/",
     code: "https://github.com/RaaaZo/bestdrinks"
@@ -129,7 +129,7 @@ export const projectsData = [
   {
     id: 2,
     title: "E-shop",
-    descTop: `This is the simple page where you can buy some clothes. As in the previous one project Front-end is written in React (used Redux and formik and some minor React libraries), Backend in Express.js, and I used MongoDB as a database.`,
+    descTop: `Page where you can buy some clothes. As in the previous one project Front-end is written in React (used Redux and formik and some minor React libraries), Backend in Express.js, and I used MongoDB as a database.`,
     descBottom: `When you log in (default account: test@test.com and password tester123) You can check your purchase history. If You won't sign in You can still "buy" things and get a thanks for buying page with Your data.`,
     live: "https://e-shop-730ae.web.app/",
     code: "https://github.com/RaaaZo/e-shop"
@@ -144,8 +144,8 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Stomatologist buisness page",
-    descTop: `This page is written for a stomatologist whose working in Toruń. Page is also made in React and it's using GoogleMaps API. Actually I'm waiting for images and text which I can add to each service he offers. Look of a page is accepted and in the near feature it will be done.`,
+    title: "Dentist business page",
+    descTop: `Page is written for a Dentist whose working in Toruń. Page is also made in React and it's using GoogleMaps API. Actually I'm waiting for images and text which I can add to each service he offers. Look of a page is accepted and in the near feature it will be done.`,
     live: "https://stomatologist-visitingcard.web.app/",
     code: "https://github.com/RaaaZo/stomatologist"
   }
@@ -168,12 +168,12 @@ export const contactData = [
     id: 3,
     svg: linkedin,
     text: "Linkedin",
-    link: "https://www.youtube.com/"
+    link: "https://www.linkedin.com/in/mateusz-koprowicz-3b8bb3178/"
   },
   {
     id: 4,
     svg: github,
     text: "Github",
-    link: "https://www.youtube.com/"
+    link: "https://github.com/RaaaZo"
   }
 ];
