@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+Portfolio with my selected projects, Written in React.js with libraries like GSAP and Styled Components.
+
+## Live
+https://portfolio-cc024.firebaseapp.com/projects
 
 ## Available Scripts
 
