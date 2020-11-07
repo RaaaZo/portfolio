@@ -62,9 +62,8 @@ const ProjectsPage = () => {
         Below are some of the projects that I realized while learning JavaScript
         and React. Some of them also use Node.js and MongoDB. If I encounter any
         problems, I try to find a solution in the documentation. If I can't
-        solve the problem myself, I refer to sites where people ask other people
-        for the solutions of their problems. There's no chance that someone else
-        didn't encounter same problem as me.
+        solve the problem myself, I refer to sites where people can direct me to
+        the correct solution.
       </StyledParagraph>
       <ProjectsWrapper>
         {projectsData.map(card => (

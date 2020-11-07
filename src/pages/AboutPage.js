@@ -28,19 +28,19 @@ const AboutPage = () => {
         <Header title="true">About me</Header>
         <Header>
           Hi, My name is <Span>Mateusz Koprowicz</Span> and I’m 24 years old
-          former student of <Span>Naval Academy</Span> in Gdynia. Whose started
-          learning programming from February 2020.
+          former student of <Span>Naval Academy</Span> in Gdynia. Who started
+          learning programming in 2019.
         </Header>
         <Paragraph>
           In August 2020, I graduated from the second-cycle studies in
           Information Systems in Security, specialization:
           <Span> IT Systems in Security</Span>. At the end of my first year of
           studies, I started my adventure with programming at the university.
-          However, I started to expand my competences in February this year. I
-          focus on the development and deepening of knowledge. Programming has
-          become my passion. I am a communicative language and open to new
-          challenges. I love learning new things. I perform the entrusted task
-          with care and accuracy.
+          However, I started to expand my competences in early 2019. I focus on
+          the development and deepening of knowledge. Programming has become my
+          passion. I am communicative and open to new challenges. I love
+          learning new things. I perform the entrusted task with care and
+          accuracy.
         </Paragraph>
       </PagesWrapper>
 

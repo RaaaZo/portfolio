@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Img } from "components/atoms/Img";
+import ProgressiveImage from "react-progressive-graceful-image";
 
 const HeroImageWrapper = styled.div`
   width: 100%;
@@ -19,12 +20,23 @@ const HeroImageWrapper = styled.div`
 const HeroImage = ({ smallImage, mediumImage, bigImage, veryBigImage }) => {
   return (
     <HeroImageWrapper>
-      <picture>
-        <source srcSet={veryBigImage} media="(min-width: 1440px)" />
-        <source srcSet={bigImage} media="(min-width: 1024px)" />
-        <source srcSet={mediumImage} media="(min-width: 500px)" />
-        <Img srcSet={smallImage} />
-      </picture>
+      <ProgressiveImage
+        srcSetData={{
+          srcSet: `${smallImage} 640w, ${mediumImage} 1280w, ${bigImage} 1920w, ${veryBigImage} 2560w`,
+          sizes: "(max-width: 2560px) 100vw, 2560px"
+        }}
+        src={veryBigImage}
+        placeholder={smallImage}
+      >
+        {(src, loading, srcSetData) => (
+          <Img
+            srcSet={srcSetData.srcSet}
+            sizes={srcSetData.sizes}
+            src={src}
+            alt="an alternative text"
+          />
+        )}
+      </ProgressiveImage>
     </HeroImageWrapper>
   );
 };

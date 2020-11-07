@@ -53,15 +53,15 @@ const NavLinks = ({
 
   const handlePushToAnimation = url => {
     const { menuElement, iconElement } = forwardedRefs;
-    gsap.to(menuElement, { width: "100%", duration: 0.7 });
-    gsap.to(iconElement, { autoAlpha: 0, duration: 0.3 });
-    gsap.to(navLinksWrapper.current, { autoAlpha: 0, duration: 0.3 });
+    gsap.to(menuElement, { width: "100%", duration: 0.5 });
+    gsap.to(iconElement, { autoAlpha: 0, duration: 0.2 });
+    gsap.to(navLinksWrapper.current, { autoAlpha: 0, duration: 0.2 });
 
     setTimeout(() => {
       history.push(url);
       window.scrollTo(0, 0);
       setIsMenuOpen(prevState => !prevState);
-    }, 700);
+    }, 500);
   };
 
   useEffect(() => {

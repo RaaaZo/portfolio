@@ -144,10 +144,10 @@ const Menu = () => {
         borderRadius: 0,
         top: 0,
         right: 0,
-        duration: 1
+        duration: 0.8
       });
 
-      gsap.to(iconAnimation.current, { x: "-=250", duration: 0.3 });
+      gsap.to(iconAnimation.current, { x: "-=250", duration: 0 });
     }
 
     if (!isMenuOpen) {
@@ -157,14 +157,13 @@ const Menu = () => {
         borderRadius: "50%",
         top: -40,
         right: -40,
-        duration: 1.2
+        duration: 0.5
       });
 
       gsap.to(iconAnimation.current, {
         x: 0,
         autoAlpha: 1,
-        duration: 0.4,
-        ease: "Power2.easeIn"
+        duration: 0
       });
     }
   }, [menuAnimation, iconAnimation, isMenuOpen]);

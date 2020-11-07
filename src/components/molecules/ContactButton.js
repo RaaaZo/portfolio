@@ -1,6 +1,6 @@
 import { Button } from "components/atoms/Button";
 import React, { Fragment, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { Header } from "components/atoms/Header";
 

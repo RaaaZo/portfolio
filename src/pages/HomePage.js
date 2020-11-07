@@ -55,7 +55,7 @@ const HomePage = () => {
       tl.fromTo(
         circle,
         { autoAlpha: 0 },
-        { autoAlpha: 1, duration: 0.5, delay: 0.5 }
+        { autoAlpha: 1, duration: 0.3, delay: 0.5 }
       )
         .fromTo(
           [name, role],
@@ -65,7 +65,7 @@ const HomePage = () => {
         .fromTo(
           innerCircleIcons,
           { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 1, stagger: 0.3 },
+          { autoAlpha: 1, duration: 0.5, stagger: 0.3 },
           "-=1.5"
         )
         .addLabel("atTheSameTime")
@@ -110,14 +110,14 @@ const HomePage = () => {
           { autoAlpha: 0 },
           {
             autoAlpha: 1,
-            duration: 2
+            duration: 1
           },
-          "atTheSameTime"
+          "atTheSameTime-=1"
         )
         .fromTo(
           icons,
           { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 1.5, stagger: 0.3 },
+          { autoAlpha: 1, duration: 1, stagger: 0.3 },
           "atTheSameTime"
         )
         .addLabel("borderWithIcons")

@@ -23,10 +23,10 @@ const ContactPage = () => {
       <PagesWrapper>
         <Header title>Contact</Header>
         <Paragraph semiBold="true">
-          I am looking for my first commercial experience in a company, where I
-          will be able to learn many new things and develop my skills even
-          faster. If you want to contact me about work or cooperation feel free
-          to use one of the methods below.
+          I am looking for my next commercial experience after six months of
+          internship, where I will be able to learn many new things and develop
+          my skills even faster. If you want to contact me about work or
+          cooperation feel free to use one of the methods below.
         </Paragraph>
         <ContactButton />
       </PagesWrapper>

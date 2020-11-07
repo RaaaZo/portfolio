@@ -13,7 +13,12 @@ import smallImage from "assets/images/hero-skills-small.jpg";
 import mediumImage from "assets/images/hero-skills-medium.jpg";
 import bigImage from "assets/images/hero-skills-big.jpg";
 import veryBigImage from "assets/images/hero-skills-very-big.jpg";
-import { actuallyLearningData, ButtonsData, wantToLearnData } from "data";
+import {
+  actuallyLearningData,
+  ButtonsData,
+  othersKnown,
+  wantToLearnData
+} from "data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,6 +78,13 @@ const StyledButton = styled(Button)`
     ${({ wantToLearn }) =>
       wantToLearn &&
       css`
+        color: #005246;
+        border-color: #005246;
+      `}
+
+    ${({ otherKnown }) =>
+      otherKnown &&
+      css`
         color: ${({ theme }) => theme.primaryDark};
         border-color: ${({ theme }) => theme.primaryDark};
       `}
@@ -97,6 +109,7 @@ const StyledArrowSvg = styled(ArrowSvg)`
   width: 60px;
   height: 60px;
   margin-bottom: 40px;
+  cursor: pointer;
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -116,7 +129,10 @@ const SkillsPage = () => {
   const arrowRef = useRef();
 
   const scrollToButtons = () => {
-    window.scrollTo(0, buttonsWrapperRef.current[0].offsetTop - 200);
+    window.scrollTo({
+      top: buttonsWrapperRef.current[0].offsetTop - 200,
+      behavior: "smooth"
+    });
   };
 
   useEffect(() => {
@@ -178,9 +194,24 @@ const SkillsPage = () => {
         <StyledArrowSvg ref={arrowRef} onClick={scrollToButtons} />
       </SvgWrapper>
 
+      <StyledHeader ref={addToRefs}>Currently known:</StyledHeader>
       <ButtonsWrapper>
         {ButtonsData.map(({ inverse, id, text }) => (
           <StyledButton ref={addToRefs} inverse={inverse} key={id}>
+            {text}
+          </StyledButton>
+        ))}
+      </ButtonsWrapper>
+
+      <StyledHeader ref={addToRefs}>Other known:</StyledHeader>
+      <ButtonsWrapper>
+        {othersKnown.map(({ inverse, id, text }) => (
+          <StyledButton
+            otherKnown="true"
+            ref={addToRefs}
+            inverse={inverse}
+            key={id}
+          >
             {text}
           </StyledButton>
         ))}

@@ -40,6 +40,16 @@ export const ButtonsData = [
     inverse: false
   },
   {
+    id: 13,
+    text: "JEST",
+    inverse: true
+  },
+  {
+    id: 14,
+    text: "REACT TESTING LIBRARY",
+    inverse: false
+  },
+  {
     id: 8,
     text: "GSAP",
     inverse: true
@@ -63,41 +73,31 @@ export const ButtonsData = [
     id: 12,
     text: "REDUX",
     inverse: true
-  },
-  {
-    id: 13,
-    text: "WEBPACK",
-    inverse: false
   }
 ];
 
 export const actuallyLearningData = [
   {
     id: 14,
-    text: "Mastering Javascript OOP",
+    text: "Mastering Express",
     inverse: false
   },
   {
     id: 15,
-    text: "Mastering Node.js and Express",
+    text: "Mastering MongoDB",
     inverse: true
   },
   {
     id: 16,
-    text: "Mastering advanced concepts in React",
+    text: "Learning TypeScript",
     inverse: false
   }
 ];
 
 export const wantToLearnData = [
   {
-    id: 17,
-    text: "Jest",
-    inverse: false
-  },
-  {
     id: 21,
-    text: "Next.js / Gatsby",
+    text: "Next.js",
     inverse: true
   },
   {
@@ -106,13 +106,36 @@ export const wantToLearnData = [
     inverse: false
   },
   {
-    id: 19,
-    text: "TypeScript",
+    id: 20,
+    text: "Sanity",
+    inverse: false
+  }
+];
+
+export const othersKnown = [
+  {
+    id: 23,
+    text: "Algorithms",
+    inverse: false
+  },
+  {
+    id: 24,
+    text: "Scrum methodology",
     inverse: true
   },
   {
-    id: 20,
-    text: "WordPress",
+    id: 25,
+    text: "Figma",
+    inverse: false
+  },
+  {
+    id: 26,
+    text: "Material UI and Bootstrap",
+    inverse: true
+  },
+  {
+    id: 27,
+    text: "KISS & DRY ",
     inverse: false
   }
 ];

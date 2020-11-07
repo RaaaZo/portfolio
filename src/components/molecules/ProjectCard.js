@@ -13,7 +13,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: ${({ theme }) => theme.primaryLight};
+  background-color: #fef0ca;
+  border: 2px solid ${({ theme }) => theme.accents};
   border-radius: 15px;
 
   @media (min-width: 768px) {
@@ -64,10 +65,10 @@ const StyledAnchor = styled.a`
   font-family: ${({ theme: { fontFamilies } }) => fontFamilies.teko};
   font-size: ${({ theme: { fontSizes } }) => fontSizes.s};
   font-weight: ${({ theme: { fontWeights } }) => fontWeights.bold};
-  background-color: ${({ theme }) => theme.secondaryLight};
+  background-color: #005246;
   color: white;
   text-align: center;
-  border: 2px solid ${({ theme }) => theme.secondaryLight};
+  border: 2px solid #005246;
   border-radius: 15px;
   text-decoration: none;
   cursor: pointer;
@@ -75,7 +76,7 @@ const StyledAnchor = styled.a`
 
   &:hover {
     border-color: ${({ theme }) => theme.accents};
-    background-color: #fff;
+    background-color: #fef0ca;
     color: ${({ theme }) => theme.accents};
   }
 
