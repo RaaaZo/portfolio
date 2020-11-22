@@ -98,12 +98,12 @@ export const wantToLearnData = [
   {
     id: 21,
     text: "Next.js",
-    inverse: true
+    inverse: false
   },
   {
     id: 18,
     text: "Graphql",
-    inverse: false
+    inverse: true
   },
   {
     id: 20,
@@ -143,30 +143,39 @@ export const othersKnown = [
 export const projectsData = [
   {
     id: 1,
-    title: "BestDrinks",
-    descTop: `Page where you can add drink recipes. Front-end is written in React (used Context instead of Redux, formik for forms, and other React libraries), Backend in Express.js, and I used MongoDB as a database.`,
-    descBottom: `When you log in (default account: test@test.com and password tester123) You can add a new recipe, edit an existing one, and delete existing recipes (if it belongs to Your account). You can also create your new account if you want. Feel free to try it.`,
-    live: "https://best-drinks-295be.web.app/",
-    code: "https://github.com/RaaaZo/bestdrinks"
+    title: "ProFood",
+    descTop: `Restaurant page with possibility of making orders, after sign in You can change profile data, check order history and make order. If not logged in You will be redirect to sign in page where You will be authenticated with JWT and bcrypt. All data is stored in MongoDB and is served by Express.js to React application.`,
+    descBottom: `Dummy account information e-mail: john@test.com, password: 123456. First use of page can be a bit longer than normally because of heroku free plan which puts the application to sleep after 30min of not using it.`,
+    live: "https://profoodapp.web.app/",
+    code: "https://github.com/RaaaZo/restaurant"
   },
   {
     id: 2,
     title: "E-shop",
-    descTop: `Page where you can buy some clothes. As in the previous one project Front-end is written in React (used Redux and formik and some minor React libraries), Backend in Express.js, and I used MongoDB as a database.`,
-    descBottom: `When you log in (default account: test@test.com and password tester123) You can check your purchase history. If You won't sign in You can still "buy" things and get a thanks for buying page with Your data.`,
+    descTop: `E-commerce page where You're able to buy things without sign in. But then You won't get purchase history, so i recommend to sign in before make an order. As in the previous project Front-end is written in React (used Redux and formik and some minor React libraries), Backend in Express.js, and I used MongoDB as a database.`,
+    descBottom: `Dummy account information e-mail: test@test.com, password: tester123. First use of page can be a bit longer than normally because of heroku free plan which puts the application to sleep after 30min of not using it.`,
     live: "https://e-shop-730ae.web.app/",
     code: "https://github.com/RaaaZo/e-shop"
   },
   {
     id: 3,
+    title: "BestDrinks",
+    descTop: `Page with recipes for drinks. After sign in You can add, update and delete Your recipes. Without sign in You can take a look at the added recipes. Front-end is written in React (used Context instead of Redux, formik for forms, and other React libraries), Backend in Express.js, and I used MongoDB as a database.`,
+    descBottom: `Dummy account information e-mail: test@test.com, password: tester123. First use of page can be a bit longer than normally because of heroku free plan which puts the application to sleep after 30min of not using it.`,
+    live: "https://best-drinks-295be.web.app/",
+    code: "https://github.com/RaaaZo/bestdrinks"
+  },
+
+  {
+    id: 4,
     title: "CountryInfo",
-    descTop: `There You can check main informations about each Country on the globe (capital name, population, region, etc.) with country name or capital name (Database accepts only English names). This project is also written in React (used context).`,
+    descTop: `Page with data about countries like capital name, population, region, etc. Api accepts only English names. This project is also written in React (used context).`,
 
     live: "https://country-info-551b0.web.app/",
     code: "https://github.com/RaaaZo/CountryInfo"
   },
   {
-    id: 4,
+    id: 5,
     title: "Dentist business page",
     descTop: `Page is written for a Dentist whose working in Toruń. Page is also made in React and it's using GoogleMaps API. Actually I'm waiting for images and text which I can add to each service he offers. Look of a page is accepted and in the near feature it will be done.`,
     live: "https://stomatologist-visitingcard.web.app/",

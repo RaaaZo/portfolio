@@ -68,9 +68,6 @@ const StyledButton = styled(Button)`
   ${({ actuallyLearning }) =>
     actuallyLearning &&
     css`
-      width: 60%;
-      padding: 10px;
-      height: 120px;
       color: ${({ theme }) => theme.secondaryLight};
       border-color: ${({ theme }) => theme.secondaryLight};
     `}
